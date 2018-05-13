@@ -10,7 +10,8 @@ class ArticlesController < ApplicationController
   
   def create
     @article = Article.new(article_params)
-
+    #hardcoded user placeholder to satisfy validations
+    @article.user = User.first
     if @article.save
       flash[:success] = "Article was successfully created"
       redirect_to articles_path(@article)
