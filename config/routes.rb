@@ -9,7 +9,13 @@ Rails.application.routes.draw do
   get 'about', to: 'pages#about'
   
   resources :articles
-
+  # sends to users controller, 'new' action
+  get 'signup', to: 'users#new'
+  resources :users, except: [:new] 
+  #want all the routes except the new user route, since it's already being used
+  #ANOTHER METHOD
+  # post 'users', to: 'users#create'
+  
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
