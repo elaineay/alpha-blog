@@ -1,7 +1,1 @@
-Validations for User class:
-
-- username must be present and unique
-
-- email must be present and unique
-
-- validate email format using regex
+A website that started off following a Udemy course and turned into my personal project!
